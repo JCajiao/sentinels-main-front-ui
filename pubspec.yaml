@@ -1,0 +1,22 @@
+name: sentinels_main_front_ui
+description: Reusable Sentinels design theme package for Flutter frontends.
+version: 0.1.0
+homepage: https://github.com/JCajiao/sentinels-main-front-ui
+repository: https://github.com/JCajiao/sentinels-main-front-ui
+issue_tracker: https://github.com/JCajiao/sentinels-main-front-ui/issues
+
+environment:
+  sdk: ^3.3.0
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:

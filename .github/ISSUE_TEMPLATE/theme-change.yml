@@ -1,0 +1,24 @@
+name: Theme Change Request
+description: Propose token or theme behavior changes.
+title: "theme: "
+labels: ["theme"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What product/use case needs this change?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the token/theme update.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Mention affected apps and backwards compatibility.

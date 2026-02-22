@@ -1,0 +1,21 @@
+name: sentinels_main_front_ui_example
+description: Example app for Sentinels Main Front UI package.
+publish_to: none
+
+environment:
+  sdk: ^3.3.0
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sentinels_main_front_ui:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
