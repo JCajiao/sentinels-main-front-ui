@@ -8,18 +8,20 @@ import 'package:sentinels_main_front_ui/src/theme/tokens/sentinels_typography.da
 class SentinelsTheme {
   const SentinelsTheme._();
 
-  static ThemeData light({Color seedColor = SentinelsColors.primary}) {
+  static ThemeData light({
+    SentinelsPalette palette = SentinelsPalette.standard,
+  }) {
     final ColorScheme scheme = ColorScheme.fromSeed(
-      seedColor: seedColor,
+      seedColor: palette.primary,
       brightness: Brightness.light,
-      primary: SentinelsColors.primary,
-      secondary: SentinelsColors.secondary,
+      primary: palette.primary,
+      secondary: palette.secondary,
       surface: SentinelsColors.surfaceLight,
       error: SentinelsColors.danger,
     );
 
     return ThemeData(
-      useMaterial3: false,
+      useMaterial3: true,
       brightness: Brightness.light,
       scaffoldBackgroundColor: SentinelsColors.backgroundLight,
       colorScheme: scheme,
@@ -27,13 +29,16 @@ class SentinelsTheme {
       textTheme: SentinelsTypography.buildTextTheme(
         SentinelsColors.textPrimaryLight,
       ),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: SentinelsColors.surfaceLight,
         foregroundColor: SentinelsColors.textPrimaryLight,
         elevation: SentinelsElevation.none,
+        scrolledUnderElevation: SentinelsElevation.none,
+        surfaceTintColor: Colors.transparent,
       ),
       cardTheme: CardThemeData(
         color: SentinelsColors.surfaceLight,
+        surfaceTintColor: Colors.transparent,
         elevation: SentinelsElevation.xs,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(SentinelsRadius.md),
@@ -58,12 +63,12 @@ class SentinelsTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(SentinelsRadius.sm),
-          borderSide: const BorderSide(color: SentinelsColors.primary),
+          borderSide: BorderSide(color: scheme.primary),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: SentinelsColors.primary,
+          backgroundColor: scheme.primary,
           foregroundColor: SentinelsColors.onPrimary,
           elevation: SentinelsElevation.sm,
           shape: RoundedRectangleBorder(
@@ -75,18 +80,20 @@ class SentinelsTheme {
     );
   }
 
-  static ThemeData dark({Color seedColor = SentinelsColors.primary}) {
+  static ThemeData dark({
+    SentinelsPalette palette = SentinelsPalette.standard,
+  }) {
     final ColorScheme scheme = ColorScheme.fromSeed(
-      seedColor: seedColor,
+      seedColor: palette.primary,
       brightness: Brightness.dark,
-      primary: SentinelsColors.primary,
-      secondary: SentinelsColors.secondary,
+      primary: palette.primary,
+      secondary: palette.secondary,
       surface: SentinelsColors.surfaceDark,
       error: SentinelsColors.danger,
     );
 
     return ThemeData(
-      useMaterial3: false,
+      useMaterial3: true,
       brightness: Brightness.dark,
       scaffoldBackgroundColor: SentinelsColors.backgroundDark,
       colorScheme: scheme,
@@ -94,13 +101,16 @@ class SentinelsTheme {
       textTheme: SentinelsTypography.buildTextTheme(
         SentinelsColors.textPrimaryDark,
       ),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: SentinelsColors.surfaceDark,
         foregroundColor: SentinelsColors.textPrimaryDark,
         elevation: SentinelsElevation.none,
+        scrolledUnderElevation: SentinelsElevation.none,
+        surfaceTintColor: Colors.transparent,
       ),
       cardTheme: CardThemeData(
         color: SentinelsColors.surfaceDark,
+        surfaceTintColor: Colors.transparent,
         elevation: SentinelsElevation.none,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(SentinelsRadius.md),
@@ -125,12 +135,12 @@ class SentinelsTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(SentinelsRadius.sm),
-          borderSide: const BorderSide(color: SentinelsColors.primary),
+          borderSide: BorderSide(color: scheme.primary),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: SentinelsColors.primary,
+          backgroundColor: scheme.primary,
           foregroundColor: SentinelsColors.onPrimary,
           elevation: SentinelsElevation.none,
           shape: RoundedRectangleBorder(

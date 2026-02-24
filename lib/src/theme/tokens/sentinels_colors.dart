@@ -1,5 +1,41 @@
 import 'package:flutter/material.dart';
 
+class SentinelsPalette {
+  const SentinelsPalette({
+    required this.name,
+    required this.primary,
+    required this.secondary,
+  });
+
+  final String name;
+  final Color primary;
+  final Color secondary;
+
+  static const SentinelsPalette standard = SentinelsPalette(
+    name: 'Standard (Corporate)',
+    primary: Color(0xFF525CE5),
+    secondary: Color(0xFF0BB197),
+  );
+
+  static const SentinelsPalette tacticalOlive = SentinelsPalette(
+    name: 'Tactical Olive',
+    primary: Color(0xFF4A5D23),
+    secondary: Color(0xFFD2B48C),
+  );
+
+  static const SentinelsPalette stealthOps = SentinelsPalette(
+    name: 'Stealth Ops',
+    primary: Color(0xFF1C2833),
+    secondary: Color(0xFF27AE60),
+  );
+
+  static const List<SentinelsPalette> values = [
+    standard,
+    tacticalOlive,
+    stealthOps,
+  ];
+}
+
 class SentinelsColors {
   const SentinelsColors._();
 
